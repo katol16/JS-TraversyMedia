@@ -7,5 +7,9 @@ What is JavaScript?
 		 	z Wiki: "An interpreted language is a type of programming language for which most of its implementations execute instructions directly and freely, without previously compiling a program into machine-language instructions. The interpreter executes the program directly, translating each statement into a sequence of one or more subroutines, and then into another language (often machine code)."
 	- Conforms to the ECMAScript specification
 	- Multi-paradigm
-		Oznacza, że możesz pisać sœój kod na wiele sposobów np: Functional code, Object oriented code. Są języki, w których np. musisz pisać kod w określony sposób, ale w JAvaScript, mozęsz to robic na wiele sposobów
+		Oznacza, że możesz pisać swój kod na wiele sposobów np: Functional code, Object oriented code. Są języki, w których np. musisz pisać kod w określony sposób, ale w JAvaScript, mozęsz to robic na wiele sposobów
+			Coś na temat paradygmatów: Jakie spełnia JAvaScript: https://en.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languages
+			Paradygmat: https://pl.wikipedia.org/wiki/Paradygmat_programowania
+			Programowanie funkcyjne: https://pl.wikipedia.org/wiki/Programowanie_funkcyjne
+			Programowanie obiektowe: https://pl.wikipedia.org/wiki/Programowanie_obiektowe
 	- Runs on the client/browser as well an on the server (Node.js)
