@@ -1,0 +1,5 @@
+Paradygmaty jakie spełnia Javascript:
+	- Functional programming -> Funkcyjne programowanie
+	- Imperative programming -> Imperatywne programowanie
+	- Reflective programming 
+	- Object-oriented programming -> Programwoanie zorietntowane obiektowo
