@@ -13,3 +13,84 @@ What is JavaScript?
 			Programowanie funkcyjne: https://pl.wikipedia.org/wiki/Programowanie_funkcyjne
 			Programowanie obiektowe: https://pl.wikipedia.org/wiki/Programowanie_obiektowe
 	- Runs on the client/browser as well an on the server (Node.js)
+
+Generalnie w tym kursie są pdostawowe rzeczy, więc notatki, będą krótkie
+
+	Pamiętaj, że możesz dać defaultowe wartości w normalnych funkcjach np:
+	function addNums(num1 = 1, num2 = 1) {
+		console.log(num1+num2);
+	}
+
+	addNums(); // wyświetli 2
+
+	function addNums(num1 = 1, num2 = 1) {
+		console.log(num1+num2);
+	}
+
+	addNums(10, 11); // wyświetli 21 -> defautlowe wartości zostaną nadpisane
+
+	Ponizej jako arrow function
+		const addNums = (num1 =1, num2 =2) => {
+			console.log(num1 + num2);
+		}
+
+	skrócony zapis dla tego przykładu
+		const addNums = (num1 =1, num2 =2) => console.log(num1 + num2);
+
+
+Object Oriented (ES5): -> Lepsza (ładneijsza) metoda
+
+	// Constructor Function	
+	function Person(firstName, lastName, dob) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dob =  new Date(dob);
+
+		// Możemy mieć poniższe metody w obiekcie, ale kontruktorze,
+		// ale wtedy przy tworzeniu każdego obiektu, we wszystkich będziemy mieli te metody
+		// Zaużmy, że chcemy skorzystać z danej metody, tylko w niektó©ych przypadakch. Wtedy najlepiej umieścić je w prototypie
+		// this.getBirthYear = function() {
+		// 	return this.dob.getFullYear();
+		// }
+		// this.getFullName = function() {
+		// 	return `${this.firstName} ${this.lastName}`;
+		// }
+	}
+
+	Person.prototype.getBirthYear = function() {
+		return this.dob.getFullYear();
+	}
+
+	Person.prototype.getFullName = function() {
+		return `${this.firstName} ${this.lastName}`;
+	}
+
+	// Instatiate Object
+	const person1 = new Person('John', 'Doe', '1-1-1980');
+	const person2 = new Person('Mary', 'Smith', '3-6-1970');
+
+	console.log(person1);
+	console.log(person2.getFullName()); // zadziała normlanie, a funckja będzie w prototypie a nie w obiekcie
+
+Object Oriented (ES6):
+
+// Class
+	class Person {
+		constructor(firstName, lastName, dob) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.dob =  new Date(dob);
+		}
+
+		getBirthYear = function() {
+			return this.dob.getFullYear();
+		}
+		getFullName = function() {
+			return `${this.firstName} ${this.lastName}`;
+		}
+	}
+
+	// Instatiate Object
+	const person1 = new Person('John', 'Doe', '1-1-1980');
+	const person2 = new Person('Mary', 'Smith', '3-6-1970');
+
